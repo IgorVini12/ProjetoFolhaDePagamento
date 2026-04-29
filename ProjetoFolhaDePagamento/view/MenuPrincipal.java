@@ -73,9 +73,10 @@ public final class MenuPrincipal {
 
     //Construtores para cada opção do menu
     private void adicionarFuncionario() {
-        TelaCadastroFuncionario tela = new TelaCadastroFuncionario(listaFuncionarios, totalCadastrado);
-        tela.exibirTela();
-    }
+    TelaCadastroFuncionario tela = new TelaCadastroFuncionario(listaFuncionarios, totalCadastrado);
+    tela.exibirTela();
+    totalCadastrado = tela.totalCadastrado; // atualiza o total
+}
 
     private void exibirFuncionarios() {
         TelaListaFuncionarios tela = new TelaListaFuncionarios(listaFuncionarios, totalCadastrado);
