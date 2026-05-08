@@ -1,33 +1,45 @@
 package model;
 
 public class Funcionario implements IFuncionario {
-    private int Matricula;
+
+    private int matricula;
     private String nome;
     private String cargo;
     private double salario;
     private int dependentes;
     private int filhosMenores14;
-    private double valetransporteDia;
+    private double valeTransporteDia;
 
-    public Funcionario(int matricula, String nome, String cargo, double salario, int dependentes, int filhosMenores14,
-            double valetransporteDia) {
-        Matricula = matricula;
+    // CONSTRUTOR
+    public Funcionario(int matricula,
+                       String nome,
+                       String cargo,
+                       double salario,
+                       int dependentes,
+                       int filhosMenores14,
+                       double valeTransporteDia) {
+
+        this.matricula = matricula;
         this.nome = nome;
         this.cargo = cargo;
         this.salario = salario;
         this.dependentes = dependentes;
         this.filhosMenores14 = filhosMenores14;
-        this.valetransporteDia = valetransporteDia;
+        this.valeTransporteDia = valeTransporteDia;
     }
 
+    // GETTERS E SETTERS
+
+    @Override
     public int getMatricula() {
-        return Matricula;
+        return matricula;
     }
 
     public void setMatricula(int matricula) {
-        Matricula = matricula;
+        this.matricula = matricula;
     }
 
+    @Override
     public String getNome() {
         return nome;
     }
@@ -36,6 +48,7 @@ public class Funcionario implements IFuncionario {
         this.nome = nome;
     }
 
+    @Override
     public String getCargo() {
         return cargo;
     }
@@ -44,6 +57,7 @@ public class Funcionario implements IFuncionario {
         this.cargo = cargo;
     }
 
+    @Override
     public double getSalario() {
         return salario;
     }
@@ -52,6 +66,7 @@ public class Funcionario implements IFuncionario {
         this.salario = salario;
     }
 
+    @Override
     public int getDependentes() {
         return dependentes;
     }
@@ -60,6 +75,7 @@ public class Funcionario implements IFuncionario {
         this.dependentes = dependentes;
     }
 
+    @Override
     public int getFilhosMenores14() {
         return filhosMenores14;
     }
@@ -68,18 +84,12 @@ public class Funcionario implements IFuncionario {
         this.filhosMenores14 = filhosMenores14;
     }
 
-    public double getValetransporteDia() {
-        return valetransporteDia;
-    }
-
-    public void setValetransporteDia(double valetransporteDia) {
-        this.valetransporteDia = valetransporteDia;
-    }
-
     @Override
     public double getValeTransporteDia() {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'getValeTransporteDia'");
+        return valeTransporteDia;
     }
-    
+
+    public void setValeTransporteDia(double valeTransporteDia) {
+        this.valeTransporteDia = valeTransporteDia;
+    }
 }
