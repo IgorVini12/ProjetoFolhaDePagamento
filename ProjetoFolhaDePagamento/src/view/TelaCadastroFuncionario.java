@@ -21,6 +21,7 @@ public class TelaCadastroFuncionario {
             JTextField campoNome = new JTextField();
             JTextField campoCargo = new JTextField();
             JTextField campoSalario = new JTextField();
+            JTextField campoDependentes = new JTextField();
 
             //add campofilhos e vale transporte para podemos fazer os calculos dos descontos
             JTextField campoFilhos = new JTextField();
@@ -32,6 +33,7 @@ public class TelaCadastroFuncionario {
                 "Nome:", campoNome,
                 "Cargo:", campoCargo,
                 "Salário:", campoSalario,
+                "Número de dependentes:", campoDependentes,
                 "Filhos menores de 14 anos:", campoFilhos,
                 "Vale transporte por dia:", campoValeTransporte
             };
@@ -45,7 +47,8 @@ public class TelaCadastroFuncionario {
                     Integer.parseInt(campoMatricula.getText()),
                     campoNome.getText(),
                     campoCargo.getText(),
-                    Double.parseDouble(campoSalario.getText()),0,
+                    Double.parseDouble(campoSalario.getText()),
+                    Integer.parseInt(campoDependentes.getText()),
                     Integer.parseInt(campoFilhos.getText()),
                     Double.parseDouble(campoValeTransporte.getText())
                     );
